@@ -6,7 +6,7 @@ respective candidates on their computers or mobile phones without need
 of ballots.
 
 ## Badges
-Nothing yet.
+https://img.shields.io/github/issues/AmbroseByamugisha/onlineVote
 
 ## Visuals
 Nothing yet.
