@@ -1,21 +1,30 @@
-import { students, candidates } from './data';
-import { LOGIN_USER } from './actionTypes'
+import { students, candidates } from '../data';
+import { LOGIN_USER } from '../actions/actionTypes'
+
+// run a function to process this data
 
 const initialState = {
     students: students,
     candidates: candidates 
 }
 
-export function authApp(state = initialState, action) {
+export default function authApp(state = initialState, action) {
     switch(action.type) {
         case LOGIN_USER:
-            return state.students.forEach(element => {
-                if(element.stud_no == input_value.stud_no && element.reg_no) {
+            state.students.forEach(element => {
+                if(action.text == element.stud_no) {
                     console.log("user exists")
                 } else {
-                    console.log("user does not exist")
+                    console.log(element.stud_no)
                 }
             });
+            // Object.keys(state).forEach(function(stud_no) {
+            //     if (state[stud_no] == action.text) {
+            //       console.log('exists');
+            //     } else {
+            //         console.log(state)
+            //     }
+            //   });
         default:
             return state;
     }
